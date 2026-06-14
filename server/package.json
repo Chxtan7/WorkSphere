@@ -19,7 +19,9 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "helmet": "^8.2.0",
-    "mongoose": "^9.7.0"
+    "mongodb": "^7.3.0",
+    "mongoose": "^9.7.0",
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@types/compression": "^1.8.1",

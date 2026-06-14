@@ -14,22 +14,28 @@
 
     "paths": {
       "@modules/*": [
-        "./src/modules/*"
+        "./src/Modules/*"
       ],
       "@config/*": [
-        "./src/config/*"
+        "./src/Config/*"
       ],
       "@core/*": [
-        "./src/core/*"
+        "./src/Core/*"
       ],
       "@middleware/*": [
-        "./src/middleware/*"
+        "./src/Middleware/*"
       ],
       "@infra/*": [
-        "./src/infrastructure/*"
+        "./src/Infrastructure/*"
       ],
       "@shared/*": [
-        "./src/shared/*"
+        "./src/Shared/*"
+      ],
+      "@types/*" : [
+        "./src/Types/*"
+      ],
+      "@database/*" : [
+        "./src/Database/*"
       ]
     },
 

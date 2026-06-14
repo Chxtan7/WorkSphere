@@ -1,10 +1,11 @@
 import dotenv from 'dotenv';
-
-dotenv.config();
+import path from 'path';
+dotenv.config({path: path.resolve(__dirname, "../../.env")});
 
 const requiredEnvVariable = [
     "PORT",
-    "NODE_ENV"
+    "NODE_ENV",
+    "MONGO_URI"
 ]
 
 requiredEnvVariable.forEach((variable) => {
@@ -13,6 +14,7 @@ requiredEnvVariable.forEach((variable) => {
 
 export const env = {
     PORT: Number(process.env.PORT),
-    ENVIONMENT: process.env.NODE_ENV,
-    APP_NAME: process.env.APP_NAME
+    ENVIRONMENT: process.env.NODE_ENV,
+    APP_NAME: process.env.APP_NAME,
+    MONGO_URI : String(process.env.MONGO_URI)
 }

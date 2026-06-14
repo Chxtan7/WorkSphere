@@ -3,6 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import compression from "compression";
 import cookieParser from "cookie-parser";
+import { errorMiddleware } from "@middleware/error.middleware";
+import router from "@modules/Health/health.route";
 
 const app = express();
 
@@ -13,8 +15,7 @@ app.use(cookieParser())
 
 app.use(express.json())
 
-app.get('/ticket', (_req, res) => {
-    res.json({ success: true, message: "Server up and runnung" })
-})
+app.use('/health', router)
 
+app.use(errorMiddleware)
 export default app;
